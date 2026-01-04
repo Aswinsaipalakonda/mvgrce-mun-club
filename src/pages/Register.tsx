@@ -30,7 +30,7 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxCiMw1EvnjJO
 export default function Register() {
   return (
     <Layout>
-      <section className="min-h-screen pt-28 pb-20 bg-navy relative overflow-hidden flex flex-col items-center justify-center">
+      <section className="min-h-[100svh] pt-28 pb-20 bg-navy relative overflow-hidden flex flex-col items-center justify-center">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-gold rounded-full blur-3xl opacity-20" />

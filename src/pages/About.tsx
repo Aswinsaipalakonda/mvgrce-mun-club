@@ -30,11 +30,11 @@ export default function About() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28 bg-primary overflow-hidden">
+      <section className="relative py-16 md:py-28 bg-primary overflow-hidden min-h-[50svh] flex items-center justify-center">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent rounded-full blur-3xl" />
         </div>
-        
+
         <div className="relative z-10 container-wide mx-auto px-4 md:px-8 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -50,7 +50,7 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-primary-foreground/80 text-lg md:text-xl max-w-3xl mx-auto"
           >
-            Discover the vision, mission, and purpose behind MVGR College of Engineering's 
+            Discover the vision, mission, and purpose behind MVGR College of Engineering's
             premier diplomatic simulation platform.
           </motion.p>
         </div>
@@ -67,19 +67,19 @@ export default function About() {
               <div className="w-16 h-1 bg-accent mb-8" />
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  Model United Nations (MUN) is an academic simulation of the United Nations 
-                  where students step into the shoes of diplomats from different countries. 
-                  Participants research, debate, and negotiate on real-world issues from 
+                  Model United Nations (MUN) is an academic simulation of the United Nations
+                  where students step into the shoes of diplomats from different countries.
+                  Participants research, debate, and negotiate on real-world issues from
                   climate change to international security just as actual UN delegates do.
                 </p>
                 <p>
-                  Through MUN, students develop a comprehensive understanding of international 
-                  relations, diplomatic procedures, and the complexities of global governance. 
+                  Through MUN, students develop a comprehensive understanding of international
+                  relations, diplomatic procedures, and the complexities of global governance.
                   It transforms theoretical knowledge into practical diplomatic skills.
                 </p>
                 <p>
-                  Whether simulating the Security Council, General Assembly, or specialized 
-                  committees, participants gain invaluable experience in public speaking, 
+                  Whether simulating the Security Council, General Assembly, or specialized
+                  committees, participants gain invaluable experience in public speaking,
                   negotiation, and collaborative problem-solving.
                 </p>
               </div>
@@ -96,8 +96,8 @@ export default function About() {
                   </h3>
                 </div>
                 <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
-                  To establish MVGRCE MUN as a premier platform for nurturing future leaders, 
-                  diplomats, and changemakers who can navigate complex global challenges with 
+                  To establish MVGRCE MUN as a premier platform for nurturing future leaders,
+                  diplomats, and changemakers who can navigate complex global challenges with
                   wisdom, empathy, and conviction.
                 </p>
 
@@ -110,8 +110,8 @@ export default function About() {
                   </h3>
                 </div>
                 <p className="text-primary-foreground/80 text-lg leading-relaxed">
-                  To provide engineering students with transformative experiences that bridge 
-                  technical education with global awareness, fostering well-rounded individuals 
+                  To provide engineering students with transformative experiences that bridge
+                  technical education with global awareness, fostering well-rounded individuals
                   equipped for leadership in an interconnected world.
                 </p>
               </div>
@@ -172,12 +172,12 @@ export default function About() {
             <div className="bg-card rounded-2xl p-8 md:p-12 shadow-lg border border-border max-w-4xl mx-auto">
               <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  Engineering education excels in building technical competence, but the 
-                  modern professional landscape demands more. Today's engineers must communicate 
+                  Engineering education excels in building technical competence, but the
+                  modern professional landscape demands more. Today's engineers must communicate
                   complex ideas, collaborate across cultures, and lead multidisciplinary teams.
                 </p>
                 <p>
-                  <strong className="text-foreground">Model United Nations bridges this gap.</strong> It provides 
+                  <strong className="text-foreground">Model United Nations bridges this gap.</strong> It provides
                   a unique platform where technical minds can develop:
                 </p>
                 <ul className="grid md:grid-cols-2 gap-4 my-8">
@@ -196,8 +196,8 @@ export default function About() {
                   ))}
                 </ul>
                 <p>
-                  At MVGRCE, we believe that combining technical prowess with diplomatic 
-                  acumen creates engineers who don't just solve problems they lead movements, 
+                  At MVGRCE, we believe that combining technical prowess with diplomatic
+                  acumen creates engineers who don't just solve problems they lead movements,
                   drive policy, and shape the future.
                 </p>
               </div>

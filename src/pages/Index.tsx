@@ -122,7 +122,7 @@ export default function Index() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -130,11 +130,11 @@ export default function Index() {
             alt="MUN Conference"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-primary/90" />
+          <div className="absolute inset-0 bg-primary/80" />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 container-wide mx-auto px-4 md:px-8 text-center py-20">
+        <div className="relative z-10 container-wide mx-auto px-4 md:px-8 text-center py-16 md:py-20">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
