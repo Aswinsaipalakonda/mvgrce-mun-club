@@ -1,6 +1,6 @@
 # MVGRCE Model United Nations Club Website 🇺🇳
 
-![MVGRCE MUN Banner](https://mvgrce-mun.vercel.app/og-image.png)
+![MVGRCE MUN Banner](assets\mun-logo.png)
 
 Welcome to the official repository for the **MVGR College of Engineering Model United Nations (MUN) Club** website. This platform serves as the central hub for our club's activities, event registrations, and information dissemination.
 
