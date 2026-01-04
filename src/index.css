@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* MUN Premium Color Palette */
+    --background: 210 20% 98%;
+    --foreground: 210 50% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 50% 10%;
+
+    /* Navy Blue Primary */
+    --primary: 210 58% 11%;
+    --primary-foreground: 45 50% 95%;
+
+    /* Gold Accent */
+    --accent: 42 50% 54%;
+    --accent-foreground: 210 58% 11%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 50% 10%;
+
+    --muted: 210 15% 92%;
+    --muted-foreground: 210 20% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 42 50% 54%;
+
+    --radius: 0.5rem;
+
+    /* Custom MUN Colors */
+    --navy: 210 58% 11%;
+    --navy-light: 210 45% 18%;
+    --navy-dark: 210 60% 8%;
+    --gold: 42 50% 54%;
+    --gold-light: 42 55% 65%;
+    --gold-dark: 42 45% 42%;
+    --cream: 45 30% 96%;
+
+    /* Gradients */
+    --gradient-navy: linear-gradient(135deg, hsl(210 58% 11%), hsl(210 60% 8%));
+    --gradient-gold: linear-gradient(135deg, hsl(42 50% 54%), hsl(42 55% 65%));
+    --gradient-hero: linear-gradient(180deg, hsl(210 58% 11%) 0%, hsl(210 45% 18%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(210 58% 11% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(210 58% 11% / 0.1), 0 2px 4px -2px hsl(210 58% 11% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(210 58% 11% / 0.1), 0 4px 6px -4px hsl(210 58% 11% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(210 58% 11% / 0.1), 0 8px 10px -6px hsl(210 58% 11% / 0.1);
+    --shadow-gold: 0 4px 14px 0 hsl(42 50% 54% / 0.3);
+
+    /* Typography */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+
+    /* Sidebar defaults */
+    --sidebar-background: 210 58% 11%;
+    --sidebar-foreground: 45 50% 95%;
+    --sidebar-primary: 42 50% 54%;
+    --sidebar-primary-foreground: 210 58% 11%;
+    --sidebar-accent: 210 45% 18%;
+    --sidebar-accent-foreground: 45 50% 95%;
+    --sidebar-border: 210 45% 18%;
+    --sidebar-ring: 42 50% 54%;
+  }
+
+  .dark {
+    --background: 210 58% 11%;
+    --foreground: 45 50% 95%;
+
+    --card: 210 45% 18%;
+    --card-foreground: 45 50% 95%;
+
+    --popover: 210 45% 18%;
+    --popover-foreground: 45 50% 95%;
+
+    --primary: 42 50% 54%;
+    --primary-foreground: 210 58% 11%;
+
+    --secondary: 210 45% 18%;
+    --secondary-foreground: 45 50% 95%;
+
+    --muted: 210 40% 22%;
+    --muted-foreground: 210 15% 65%;
+
+    --accent: 42 50% 54%;
+    --accent-foreground: 210 58% 11%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 40% 22%;
+    --input: 210 40% 22%;
+    --ring: 42 50% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 py-16 md:px-8 md:py-24 lg:px-16 lg:py-32;
+  }
+
+  .container-narrow {
+    @apply max-w-4xl mx-auto;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent;
+  }
+
+  .bg-navy-gradient {
+    background: var(--gradient-navy);
+  }
+
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .gold-underline {
+    @apply relative;
+  }
+
+  .gold-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-accent transform scale-x-0 origin-left transition-transform duration-300;
+  }
+
+  .gold-underline:hover::after {
+    @apply scale-x-100;
+  }
+
+  .card-elevated {
+    @apply bg-card rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .btn-gold {
+    @apply bg-accent text-accent-foreground font-semibold px-6 py-3 rounded-md shadow-md hover:shadow-gold transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-outline-gold {
+    @apply border-2 border-accent text-accent font-semibold px-6 py-3 rounded-md hover:bg-accent hover:text-accent-foreground transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
