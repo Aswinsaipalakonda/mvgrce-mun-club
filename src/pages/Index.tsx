@@ -141,11 +141,7 @@ export default function Index() {
             transition={{ duration: 0.6 }}
             className="mb-6 md:mb-8"
           >
-            <img
-              src={munLogo}
-              alt="MVGRCE MUN Logo"
-              className="h-28 md:h-36 lg:h-44 mx-auto drop-shadow-2xl"
-            />
+            
           </motion.div>
 
           <motion.h1
